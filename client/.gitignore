@@ -1,0 +1,14 @@
+# sportsmart/client/.gitignore
+
+# dependencies
+node_modules/
+
+# dotenv
+.env
+
+# build files
+dist/
+build/
+
+# system files
+.DS_Store
