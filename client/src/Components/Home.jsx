@@ -5,17 +5,19 @@ import Carousel from './Carousel';
 import './Home.css'
 import Topselling from './Topselling';
 import Footer from './Footer';
-import Bss from './bss';
+import Bss from './Bss';
+
+
 
 
 function Home() {
- 
+
   return (
     <>
       <Navbar></Navbar>
       <Carousel></Carousel>
       <SNavbar></SNavbar>
-      <Bss></Bss>
+      <Bss />
       <Topselling></Topselling>
       <Footer></Footer>
     </>
