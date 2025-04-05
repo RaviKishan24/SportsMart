@@ -67,7 +67,7 @@ function App() {
   useEffect(() => {
     const checkAuthentication = async () => {
       try {
-        const userRes = await fetch("http://localhost:7000/api/check-auth", {
+        const userRes = await fetch("https://sportsmart-j5oj.onrender.com/api/check-auth", {
           method: "GET",
           credentials: "include",
         });
@@ -79,7 +79,7 @@ function App() {
           return;
         }
 
-        const adminRes = await fetch("http://localhost:7000/adminApi/check-auth", {
+        const adminRes = await fetch("https://sportsmart-j5oj.onrender.com/adminApi/check-auth", {
           method: "GET",
           credentials: "include",
         });

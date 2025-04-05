@@ -4,7 +4,7 @@ axios.defaults.withCredentials = true;
 export const fetchProductAction = () => async (dispatch) => {
     dispatch({ type: FETCH_PRODUCT_REQUEST });
     try {
-        const response = await axios.get("http://localhost:7000/Product/fetch-allproduct");
+        const response = await axios.get("https://sportsmart-j5oj.onrender.com/fetch-allproduct");
 
         if (response.data.success) {
             dispatch({ type: FETCH_PRODUCT_SUCCESS, payload: response.data.data })

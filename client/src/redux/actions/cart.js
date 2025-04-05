@@ -20,7 +20,7 @@ export const addtocartAction = (productId) => async (dispatch) => {
 
     dispatch({ type: ADD_TO_CART_REQUEST })
     try {
-        const response = await axios.get(`http://localhost:7000/Cart/addtocart/${productId}`);
+        const response = await axios.get(`https://sportsmart-j5oj.onrender.com/Cart/addtocart/${productId}`);
         console.log("Backend Response:", response.data);
 
         if (response.data.success) {
@@ -43,7 +43,7 @@ export const addtocartAction = (productId) => async (dispatch) => {
 export const fetchcartproductAction = () => async (dispatch) => {
     dispatch({ type: FETCH_CART_PRODUCT_REQUEST })
     try {
-        const response = await axios.get("http://localhost:7000/Cart/fetch-cartproducts")
+        const response = await axios.get("https://sportsmart-j5oj.onrender.com/Cart/fetch-cartproducts")
         if (response.data.success) {
             dispatch({ type: FETCH_CART_PRODUCT_SUCCESS, payload: response.data.data })
         }
@@ -58,7 +58,7 @@ export const removeproductfromcartAction = (productId) => async (dispatch) => {
     console.log("dispached product id for remove from cart :", productId)
     dispatch({ type: REMOVE_TO_CART_REQUEST })
     try {
-        const response = await axios.delete(`http://localhost:7000/Cart/remove-productfrom-cart/${productId}`)
+        const response = await axios.delete(`https://sportsmart-j5oj.onrender.com/Cart/remove-productfrom-cart/${productId}`)
         console.log("backend response product remove from cart", response.data)
         if (response.data.success) {
             dispatch({ type: REMOVE_TO_CART_SUCCESS, payload: response.data.data })
@@ -78,7 +78,7 @@ export const togglewishlistAction = (productId) => async (dispatch) => {
 
     dispatch({ type: ADD_TO_WISHLIST_REQUEST })
     try {
-        const response = await axios.patch(`http://localhost:7000/Cart/togglewishlist/${productId}`);
+        const response = await axios.patch(`https://sportsmart-j5oj.onrender.com/Cart/togglewishlist/${productId}`);
         console.log("Backend Response:", response.data);
 
         if (response.data.success) {
@@ -106,7 +106,7 @@ export const togglewishlistAction = (productId) => async (dispatch) => {
 export const fetchwishlistproductAction = () => async (dispatch) => {
     dispatch({ type: FETCH_WISHLIST_PRODUCT_REQUEST })
     try {
-        const response = await axios.get("http://localhost:7000/Cart/fetch-wishlistproducts")
+        const response = await axios.get("https://sportsmart-j5oj.onrender.com/Cart/fetch-wishlistproducts")
         if (response.data.success) {
             dispatch({ type: FETCH_WISHLIST_PRODUCT_SUCCESS, payload: response.data.data })
         }
@@ -124,7 +124,7 @@ export const increaseQuantityAction = (productId) => async (dispatch) => {
 
     dispatch({ type: INCREASE_QUANTITY_REQUEST })
     try {
-        const response = await axios.put(`http://localhost:7000/Cart/increase-quantity/${productId}`);
+        const response = await axios.put(`https://sportsmart-j5oj.onrender.com/Cart/increase-quantity/${productId}`);
         console.log("Backend Response data is :", response.data);
 
         if (response.data.success) {
@@ -147,7 +147,7 @@ export const decreaseQuantityAction = (productId) => async (dispatch) => {
 
     dispatch({ type: DECREASE_QUANTITY_REQUEST })
     try {
-        const response = await axios.put(`http://localhost:7000/Cart/decrease-quantity/${productId}`);
+        const response = await axios.put(`https://sportsmart-j5oj.onrender.com/Cart/decrease-quantity/${productId}`);
         console.log("Backend Response data is:", response.data);
 
         if (response.data.success) {

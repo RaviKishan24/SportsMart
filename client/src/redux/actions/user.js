@@ -22,7 +22,7 @@ import { toast } from 'sonner';
 export const registerUserAction = (formData, navigate) => async (dispatch) => {
     dispatch({ type: REGISTER_USER_REQUEST })
     try {
-        const response = await axios.post("http://localhost:7000/Auth/SignUp", formData);
+        const response = await axios.post("https://sportsmart-j5oj.onrender.com/Auth/SignUp", formData);
         if (response.data.success) {
             dispatch({ type: REGISTER_USER_SUCCESS, payload: response.data.data });
             navigate("/otp-verification")
@@ -46,7 +46,7 @@ export const registerUserAction = (formData, navigate) => async (dispatch) => {
 export const otpVerifiactionAction = (formData, navigate) => async (dispatch) => {
     dispatch({ type: OTP_VERIFICATION_REQUEST })
     try {
-        const response = await axios.post("http://localhost:7000/Auth/otpVerification", formData);
+        const response = await axios.post("https://sportsmart-j5oj.onrender.com/Auth/otpVerification", formData);
         if (response.data.success) {
             dispatch({ type: OTP_VERIFICATION_SUCCESS, payload: response.data.data });
             navigate("/Login")
@@ -70,7 +70,7 @@ export const otpVerifiactionAction = (formData, navigate) => async (dispatch) =>
 export const resendOtpAction = (email) => async (dispatch) => {
     dispatch({ type: NEW_OTP_GENERATE_REQUEST })
     try {
-        const response = await axios.post("http://localhost:7000/Auth/resend-otp", { email });
+        const response = await axios.post("https://sportsmart-j5oj.onrender.com/Auth/resend-otp", { email });
         console.log("response is ", response)
         if (response.data.success) {
             dispatch({ type: NEW_OTP_GENERATE_SUCCESS, payload: response.data.data })
@@ -91,7 +91,7 @@ export const resendOtpAction = (email) => async (dispatch) => {
 export const LoginAction = (formData, navigate) => async (dispatch) => {
     dispatch({ type: LOGIN_USER_REQUEST })
     try {
-        const response = await axios.post("http://localhost:7000/Auth/login", formData);
+        const response = await axios.post("https://sportsmart-j5oj.onrender.com/Auth/login", formData);
         if (response.data.success) {
             dispatch({ type: LOGIN_USER_SUCCESS, payload: response.data.data });
 
@@ -114,7 +114,7 @@ export const LoginAction = (formData, navigate) => async (dispatch) => {
     export const logoutAction = (navigate) => async (dispatch) => {
         dispatch({ type: LOGOUT_USER_REQUEST })
         try {
-            const response = await axios.post("http://localhost:7000/Auth/logout");
+            const response = await axios.post("https://sportsmart-j5oj.onrender.com/Auth/logout");
             if (response.data.success) {
                 dispatch({ type: LOGOUT_USER_SUCCESS, payload: response.data.data })
                 toast.success(response.data.message)
@@ -136,7 +136,7 @@ export const LoginAction = (formData, navigate) => async (dispatch) => {
 export const sendotpAction = (email) => async (dispatch) => {
     dispatch({ type: SEND_OTP_REQUEST })
     try {
-        const response = await axios.post("http://localhost:7000/Auth/password-Change", { email })
+        const response = await axios.post("https://sportsmart-j5oj.onrender.com/Auth/password-Change", { email })
         console.log("Received response", response);
         if (response.data.success) {
             dispatch({ type: SEND_OTP_SUCCESS, payload: response.data.data })
@@ -156,7 +156,7 @@ export const verifyOTPAction = (otp) => async (dispatch) => {
     dispatch({ type: VERIFY_OTP_REQUEST })
 
     try {
-        const response = await axios.post("http://localhost:7000/Auth/otp-verify", { otp })
+        const response = await axios.post("https://sportsmart-j5oj.onrender.com/Auth/otp-verify", { otp })
 
         if (response.data.success) {
             dispatch({ type: VERIFY_OTP_SUCCESS, payload: response.data.data })
@@ -176,7 +176,7 @@ export const updatepasswordAction = (password) => async (dispatch) => {
     dispatch({ type: UPDATE_PASSWORD_REQUEST })
 
     try {
-        const response = await axios.patch("http://localhost:7000/Auth/update-password", { password })
+        const response = await axios.patch("https://sportsmart-j5oj.onrender.com/Auth/update-password", { password })
         console.log(response)
         if (response.data.success) {
             dispatch({ type: UPDATE_PASSWORD_SUCCESS, payload: response.data.data })
@@ -194,7 +194,7 @@ export const updatepasswordAction = (password) => async (dispatch) => {
 export const getUserAction = () => async (dispatch) => {
     dispatch({ type: GET_USER_REQUEST })
     try {
-        const response = await axios.get("http://localhost:7000/Auth/getuser")
+        const response = await axios.get("https://sportsmart-j5oj.onrender.com/Auth/getuser")
         if (response.data.success) {
             dispatch({ type: GET_USER_SUCCESS, payload: response.data.data })
         }
@@ -206,7 +206,7 @@ export const getUserAction = () => async (dispatch) => {
 export const addAddressAction = (formData) => async (dispatch) => {
     dispatch({ type: ADD_ADDRESS_REQUEST })
     try {
-        const response = await axios.post("http://localhost:7000/Auth/addAddress", formData)
+        const response = await axios.post("https://sportsmart-j5oj.onrender.com/Auth/addAddress", formData)
         if (response.data.success) {
             dispatch({ type: ADD_ADDRESS_SUCCESS, payload: response.data.data })
             toast.success(response.data.data)
@@ -221,7 +221,7 @@ export const addAddressAction = (formData) => async (dispatch) => {
 export const getAddressAction = () => async (dispatch) => {
     dispatch({ type: GET_ADDRESS_REQUEST })
     try {
-        const response = await axios.get("http://localhost:7000/Auth/getAddress")
+        const response = await axios.get("https://sportsmart-j5oj.onrender.com/Auth/getAddress")
         if (response.data.success) {
             dispatch({ type: GET_ADDRESS_SUCCESS, payload: response.data.data })
         } else {
@@ -236,7 +236,7 @@ export const placeOrderAction = (navigate) => async (dispatch) => {
     
     dispatch({ type: PLACE_ORDER_REQUEST });
     try {
-        const response = await axios.post("http://localhost:7000/orders");
+        const response = await axios.post("https://sportsmart-j5oj.onrender.com/orders");
        
 
 

@@ -19,7 +19,7 @@ connectDB()
 server.use(express.json());
 server.use(cookieParser());
 server.use(cors({
-    origin: "https://sportsmart11.netlify.app",
+    origin: "https://sportsmart11.netlify.app/",
     credentials: true,
 }))
 
