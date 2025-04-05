@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const { connectDB } = require('./sprtsdatabase');
 
 
-const { UserRouter, router } = require("../server/routes/user");
+const { UserRouter, router } = require("./routes/user");
 const cartRouter = require('./routes/cart');
 const productRouter = require('./routes/product');
 const { adminRouter, admin } = require('./routes/admin');
@@ -19,7 +19,7 @@ connectDB()
 server.use(express.json());
 server.use(cookieParser());
 server.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://sportsmart11.netlify.app",
     credentials: true,
 }))
 
