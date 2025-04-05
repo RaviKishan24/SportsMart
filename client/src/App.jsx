@@ -19,7 +19,7 @@ import Login from './Components/Login'
 
 import Account from './Components/User/Account'
 import Upload from './Components/Upload'
-import Passwordchange from './Components/User/passwordchange'
+
 
 
 import Setting from './Components/Admin/Setting'
@@ -29,6 +29,7 @@ import AdminNavbar from './Components/Admin/AdminNavbar'
 import AdminHome from './Components/Admin/AdminHome'
 import PlaceOrder from './Components/User/PlaceOrder'
 import Football from './Components/Products/Football'
+import Passwordchange from "./Components/User/Passwordchange"
 
 const router = createBrowserRouter(
   [
@@ -42,7 +43,7 @@ const router = createBrowserRouter(
     { path: '/Account', element: <Account /> },
     { path: "/Football", element: <Football/> },
     { path: '/upload', element: <Upload /> },
-    { path: '/changepassword', element: <Passwordchange /> },
+    { path: '/changepassword', element:<Passwordchange/> },
     {path:'/placeOrder',element:<PlaceOrder/>},
     // 🔥 Private Route for Admin Only
     {

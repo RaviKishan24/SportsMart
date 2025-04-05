@@ -132,4 +132,7 @@ function Passwordchange() {
   );
 }
 
-export default Passwordchange
+export default Passwordchange;
+
+
+
