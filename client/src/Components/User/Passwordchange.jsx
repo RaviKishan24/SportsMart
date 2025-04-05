@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import './passwordchange.css'
+import "./Passwordchange.css"
 import { toast } from 'sonner'
 import { useNavigate } from 'react-router'
 import { sendotpAction, updatepasswordAction, verifyOTPAction } from '../../redux/actions/user'
