@@ -1,0 +1,49 @@
+.login-form {
+    width: 410px;
+    height: auto;
+    min-height: 500px;
+    background: #ccc;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+
+.show-password {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+.show-password input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+
+.show-password label {
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.orsignup {
+    width: 180px;
+    height: 35px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.orsignup:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+
+    transition: all 0.2s ease-in-out;
+
+}
+
+.facebook-btn {
+    color: #fff;
+    background-color: #3b5998;
+
+}

@@ -1,0 +1,181 @@
+.Nav {
+  height: 100px;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #092143;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.smlogo {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.navbar-brand {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+ 
+}
+
+.icn {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+  
+}
+
+.search-container {
+  position: relative;
+  flex: 1;
+  margin: 0 20px;
+  max-width: 450px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px 40px 10px 40px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 16px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+  cursor: pointer;
+}
+
+.user-name {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.loginn p {
+  color: white;
+}
+
+.cart p {
+  color: white;
+}
+.profilePic{
+  height: 50px;
+  width: 50px;
+  object-fit: cover ;
+  border-radius: 50%;
+  object-position: center;
+}
+
+/* Tablets (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .Nav {
+    flex-direction: row;
+    height: 100px;
+    padding: 10px 15px;
+  }
+
+  .smlogo {
+    height: 60px;
+    width: 60px;
+  }
+
+  .navbar-brand {
+    gap: 15px;
+  }
+
+  .search-container {
+    max-width: 300px;
+    margin: 0 10px;
+  }
+
+  .search-bar {
+    font-size: 15px;
+    padding: 8px 30px 8px 30px;
+  }
+
+  .Icons {
+    gap: 15px;
+  }
+
+  .icn {
+    font-size: 26px;
+  }
+}
+
+/* Laptops (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .Nav {
+    height: 100px;
+    padding: 10px 20px;
+  }
+
+  .smlogo {
+    height: 70px;
+    width: 70px;
+  }
+
+  .search-container {
+    max-width: 350px;
+  }
+
+  .search-bar {
+    font-size: 16px;
+    padding: 10px 40px 10px 40px;
+  }
+
+  .Icons {
+    gap: 20px;
+  }
+
+  .icn {
+    font-size: 28px;
+  }
+}
+
+/* Desktops (1025px and above) */
+@media (min-width: 1025px) {
+  .Nav {
+    height: 100px;
+    padding: 10px 30px;
+  }
+
+  .search-container {
+    max-width: 450px;
+  }
+
+  .search-bar {
+    font-size: 16px;
+    padding: 10px 40px 10px 40px;
+  }
+
+  .Icons {
+    gap: 20px;
+  }
+
+  .icn {
+    font-size: 30px;
+  }
+}
