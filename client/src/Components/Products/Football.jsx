@@ -60,4 +60,4 @@ function Football() {
     )
 }
 
-export default Football
+export default Football;

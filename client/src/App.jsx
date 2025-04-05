@@ -16,7 +16,7 @@ import Ball from './Components/Products/Ball'
 import Bat from './Components/Products/Bat'
 import Cart from './Components/Cart'
 import Login from './Components/Login'
-import Football from './Components/Products/football'
+
 import Account from './Components/User/Account'
 import Upload from './Components/Upload'
 import Passwordchange from './Components/User/passwordchange'
@@ -28,6 +28,7 @@ import Products from './Components/Admin/Products'
 import AdminNavbar from './Components/Admin/AdminNavbar'
 import AdminHome from './Components/Admin/AdminHome'
 import PlaceOrder from './Components/User/PlaceOrder'
+import Football from './Components/Products/Football'
 
 const router = createBrowserRouter(
   [
@@ -39,7 +40,7 @@ const router = createBrowserRouter(
     { path: "/cart", element: <Cart /> },
     { path: "/Ball", element: <Ball /> },
     { path: '/Account', element: <Account /> },
-    { path: "/Football", element: <Football /> },
+    { path: "/Football", element: <Football/> },
     { path: '/upload', element: <Upload /> },
     { path: '/changepassword', element: <Passwordchange /> },
     {path:'/placeOrder',element:<PlaceOrder/>},
