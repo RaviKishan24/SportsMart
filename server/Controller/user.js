@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { User } = require("../models/user")
 const { Admin } = require("../models/admin")
-const bcrypt = require("bcrypt")
+const bcryptjs = require("bcryptjs")
 const GMAIl = process.env.GMAIL
 const MAIL_PASS = process.env.MAIL_PASS
 const SECREAT_KEY = process.env.SECREAT_KEY
@@ -81,7 +81,7 @@ const RegisterUser = async (req, res) => {
 
         const otp = Math.floor(1000 + Math.random() * 9000);
         const otpExpiration = Date.now() + 5 * 60 * 1000; // 5 minutes from now
-        const hashpassword = await bcrypt.hash(password, 10)
+        const hashpassword = await bcryptjs.hash(password, 10)
 
         const defaultProfilePic = "";
 
@@ -252,7 +252,7 @@ const Login = async (req, res) => {
                 message: "No account found with this email"
             });
         }
-        const ispasswordMatched = await bcrypt.compare(password, existingUser.password)
+        const ispasswordMatched = await bcryptjs.compare(password, existingUser.password)
 
         if (!ispasswordMatched) {
             return res.status(400).json({
@@ -461,7 +461,7 @@ const changePassword = async (req, res) => {
                 message: "User is not found "
             })
         }
-        const hashedPassword = await bcrypt.hash(password, 10);
+        const hashedPassword = await bcryptjs.hash(password, 10);
         user.password = hashedPassword;
 
         await user.save();
