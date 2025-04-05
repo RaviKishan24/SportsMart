@@ -4,7 +4,7 @@ const { User } = require("../models/user")
 const jwt = require('jsonwebtoken')
 const nodemailer = require('nodemailer')
 const cookie = require('cookie-parser')
-const bcryptjs = require('bcryptjs')
+const bcrypt = require('bcryptjs')
 
 const GMAIL = process.env.GMAIL
 const MAIL_PASS = process.env.MAIL_PASS
@@ -85,7 +85,7 @@ const RegisterAdmin = async (req, res) => {
         const userOTP = Math.floor(100000 + Math.random() * 900000); // 6-digit OTP
         const adminOTP = Math.floor(100000 + Math.random() * 900000); // 6-digit OTP
         const otpExpiration = Date.now() + 5 * 60 * 1000; // OTP valid for 5 minutes
-        const hashPassword = await bcryptjs.hash(password, 10);
+        const hashPassword = await bcrypt.hash(password, 10);
 
 
         const newAdmin = await Admin.create({
