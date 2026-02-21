@@ -1,0 +1,62 @@
+/* PageStyles.css */
+
+.page-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .product-container {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+  }
+  
+  .product-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  .product-price {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #e74c3c;
+  }
+  
+  .price-text {
+    font-weight: bold;
+  }
+  
+  .price-discount {
+    text-decoration: line-through;
+    color: #95a5a6;
+    margin-left: 10px;
+  }
+  
+  .product-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .product-image {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-description {
+    font-size: 1rem;
+    color: #444;
+  }
+  

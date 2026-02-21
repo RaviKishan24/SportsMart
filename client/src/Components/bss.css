@@ -1,0 +1,64 @@
+.budget-shop-container {
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+
+  
+}
+
+.budget-shop-heading {
+  font-size: 2rem;
+  color: #333;
+  
+ 
+}
+
+.budget-shop-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.budget-shop-img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.budget-shop-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.budget-shop-container,
+.category-container {
+    position: static;
+    overflow: visible;
+}
+@media (max-width: 768px) {
+  .budget-shop-container {
+      padding: 10px;
+  }
+
+  .budget-shop-heading {
+      font-size: 1.5rem;
+  }
+
+  .budget-shop-list {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+  }
+
+  .budget-shop-img {
+      max-height: 300px;
+  }
+}

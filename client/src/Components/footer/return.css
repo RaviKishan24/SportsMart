@@ -1,0 +1,59 @@
+/* PageStyles.css */
+
+.page-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  .page-subtitle {
+    font-size: 1.4rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #34495e;
+    font-weight: 500;
+  }
+  
+  .page-text {
+    font-size: 1rem;
+    margin-bottom: 18px;
+    color: #444;
+  }
+  
+  .page-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  
+  .page-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+  }
+  
+  .page-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #27ae60;
+  }
+  
+  .page-list li:last-child {
+    margin-bottom: 0;
+  }
+  

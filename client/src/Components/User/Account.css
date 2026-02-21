@@ -1,0 +1,398 @@
+.side-bar {
+  height: 100vh;
+  background-color: #f9f9f9;
+  width: 250px;
+  position: fixed;
+  border-top: 20px;
+  z-index: 10;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+}
+
+.side-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-bar li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.side-bar li:hover {
+  background-color: #e9ecef;
+  transform: scale(1.02);
+  color: black;
+}
+
+
+.side-bar li i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #555;
+}
+
+.side-bar li:hover {
+  background-color: #e9ecef;
+  transform: scale(1.02);
+  color: black;
+}
+
+
+.main-display-area {
+  margin-left: 253px;
+  margin-top: 100px;
+  width: auto;
+  height: 100%;
+}
+
+.profile-main {
+  height: auto;
+  font-family: Arial, sans-serif;
+  margin-top: 100px;
+  justify-content: center;
+}
+
+.user_data {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.user_data img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+
+}
+
+
+.user_data p {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.user_data button {
+  background-color: darkorange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.user_data button:hover {
+  background-color: #218838;
+}
+
+.logout-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.logout-content {
+  height: 200px;
+  width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}  
+
+
+/* Updated CSS */
+.unique-orders-container {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+}
+
+.unique-title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.unique-orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.unique-order-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.unique-order-card:hover {
+  transform: scale(1.02);
+}
+
+.unique-order-id {
+  font-weight: bold;
+  font-size: 18px;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.unique-total-amount span, .unique-delivery-date span {
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.unique-status {
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.unique-status.pending {
+  color: orange;
+}
+
+.unique-status.completed {
+  color: green;
+}
+
+.unique-status.cancelled {
+  color: red;
+}
+
+.unique-products {
+  margin-top: 15px;
+}
+
+.unique-product {
+  background: #f8f8f8;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.unique-product-title {
+  font-weight: bold;
+}
+
+.unique-product-price {
+  color: #666;
+}
+
+.unique-no-orders {
+  text-align: center;
+  color: red;
+  font-size: 18px;
+}
+.unique-cancel-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+.unique-cancel-button:hover {
+  background-color: #c0392b;
+}
+
+
+
+
+
+
+/* === Tablet and Small Desktop Screens (1024px and below) === */
+
+@media (max-width: 1024px) {
+  .profile-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side-bar {
+    width: 100%;
+    top: 80px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: fixed;
+    padding-top: 25px;
+    border-left: 1px solid grey;
+    z-index: 10;
+  }
+
+  .side-bar ul {
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+
+  }
+
+  .side-bar li {
+    font-size: 12px;
+    padding: 10px 15px;
+    margin-bottom: 0;
+  }
+
+  .side-bar li i {
+    font-size: 16px;
+    margin-right: 8px;
+  }
+
+  .main-display-area {
+    margin-left: 0;
+    padding-top: 65px;
+    width: 90%;
+    max-width: 800px;
+    margin: 120px auto 0 auto;
+  }
+
+  .profile-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .user_data img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .user_data button {
+    width: 100%;
+  }
+}
+
+@media(max-width:768px) {
+  .side-bar {
+    position: fixed;
+    top: 70px;
+    padding-top: 30px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .side-bar ul {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .side-bar li {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .main-display-area {
+    width: 95%;
+    max-width: 600px;
+    margin-top: 120px;
+    padding-top: 60px;
+  }
+
+  .user_data {
+    padding: 15px;
+  }
+
+  .user_data img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .user_data button {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media(max-width:480px) {
+  .side-bar {
+    top: 60px;
+    padding: 5px;
+  }
+
+  .side-bar ul {
+    gap: 3px;
+  }
+
+  .side-bar li {
+    font-size: 10px;
+    padding: 6px 8px;
+  }
+
+  .main-display-area {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin-top: 90px;
+  }
+
+  .user_data img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .user_data p {
+    font-size: 14px;
+  }
+
+  .user_data button {
+    font-size: 12px;
+    padding: 6px;
+  }
+}

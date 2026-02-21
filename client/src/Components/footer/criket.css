@@ -1,0 +1,72 @@
+/* PageStyles.css */
+
+/* General container for the page */
+.page-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  /* Each product container */
+  .product-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    margin: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Product title */
+  .product-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Pricing details */
+  .product-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .price-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .price-discount {
+    font-size: 1rem;
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  /* Product images */
+  .product-images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  /* Description of the product */
+  .product-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+  
