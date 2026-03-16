@@ -30,8 +30,7 @@ function SNavbar() {
     { img: chess, label: "Chess", link: "/chess" },
     { img: tennis, label: "Table Tennis", link: "/table" },
     { img: apparels, label: "Apparels", link: "/apparels" },
-    { img: trophy, label: "Footwears", link: "/trophy" },
-    { img: trophy, label: "Protective Gears", link: "/gears" }
+    { img: trophy, label: "Trophy", link: "/trophy" },
   ];
 
 
