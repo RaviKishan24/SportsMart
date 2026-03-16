@@ -14,12 +14,10 @@ function Home() {
 
   return (
     <>
-      <Navbar></Navbar>
       <Carousel></Carousel>
       <SNavbar></SNavbar>
       <Bss />
       <Topselling></Topselling>
-      <Footer></Footer>
     </>
   );
 }

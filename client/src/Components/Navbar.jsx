@@ -75,7 +75,7 @@ function Navbar() {
       <div className="container-fluid">
         <Link to="/" className='d-flex  justify-content-center align-items-center'>
           <img src={logo} alt="" className='smlogo' />
-          <h4>SPORTSMART</h4>
+          <h4 className='logoName'>SPORTSMART</h4>
         </Link>
         <div className="search-container">
           <input type="text" className="search-bar" placeholder="Search Your Product Here...."
@@ -85,24 +85,11 @@ function Navbar() {
           />
 
           <i className="fas fa-search search-icon" onClick={handleSearch} />
-          {/*     
-          {loading && <p>Loading...</p>}
-          {error && <p style={{ color: "red" }}>{error}</p>}
-    
-          {searchResults.length > 0 && (
-            <ul>
-              {searchResults.map((product) => (
-                <li key={product._id}>{product.title}</li>
-              ))}
-            </ul>
-          )} */}
-
-
-
+        
         </div>
         <div className="Icons  mt-3   d-flex gap-5" >
 
-          <Link className='icons cart' to={"/cart"}>
+          <Link className='icons cart cart-icon' to={"/cart"}>
             <i className="icn fa-solid fa-cart-shopping" ></i>
             <p>Cart</p>
           </Link>

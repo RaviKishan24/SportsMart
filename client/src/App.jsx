@@ -1,11 +1,12 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { Toaster } from 'sonner'
 import { getUserAction } from './redux/actions/user'
 import { getAdminAction } from "./redux/actions/admin"
 import './App.css'
 import PrivateRoute from './Components/PrivateRoute'
+import Layout from "./Components/Layout"
 
 
 
@@ -53,58 +54,59 @@ import Footwears from './Components/Products/Footwears'
 import Apparels from './Components/Products/Apparels'
 
 const router = createBrowserRouter(
-  [
-    { path: '/', element: <Home /> },
-    { path: "/Bat", element: <Bat />, },
-    { path: "/Login", element: <Login /> },
-    
-    { path: "/Register", element: <Register /> },
-    { path: "/otp-verification", element: <OtpVerification /> },
-    { path: "/cart", element: <Cart /> },
-    {path:"/placeOrder",element:<PlaceOrder></PlaceOrder>},
-    { path: "/Ball", element: <Ball /> },
-    { path: "/badminton", element:<Badminton></Badminton> },
-    { path: "/basket", element:<Basket></Basket> },
-    { path: "/volly", element:<Volly></Volly> },
-    { path: "/chess", element:<Chess></Chess> },
-    { path: "/table", element:<Table></Table> },
-    { path: "/shuttle", element:<Shuttles></Shuttles> },
-    { path: "/trophy", element:<Footwears></Footwears> },
-    { path: "/apparels", element:<Apparels></Apparels>},
-    { path: "/carromboard", element:<Carrom></Carrom> },
-    
-    { path: '/Account', element: <Account /> },
-    { path: "/Football", element: <Football/> },
-    { path: '/upload', element: <Upload /> },
-    { path: '/changepassword', element:<Passwordchange/> },
-    {path:'/our-story',element:<Story></Story>},
-    {path:'/term',element:<Terms></Terms>},
-    {path:'/privacy',element:<Privacy></Privacy>},
-    {path:'/return',element:<Return></Return>},
-    {path:'/shipping',element:<Shipping></Shipping>},
-    {path:'/pumas',element:<Pumas></Pumas>},
-    {path:'/addidas',element:<Addidas></Addidas>},
-    {path:'/nike',element:<Nike></Nike>},
-    {path:'/criket',element:<Cricket></Cricket>},
-    {path:'/foot',element:<Foot></Foot>},
-    {path:'/archery',element:<Archery></Archery>},
-    {path:'/tennis',element:<Tennis></Tennis>},
+  [{
+    path: "/", element: <Layout />, children: [
+      { path: '/', element: <Home /> },
+      { path: "/Bat", element: <Bat />, },
+      { path: "/Login", element: <Login /> },
 
-    // 🔥 Private Route for Admin Only
-    {
-      path: "/admin",
-      element: <PrivateRoute role={['admin']} />,   // Protects all /admin routes
-      children: [
-        { path: "", element: <AdminNavbar />},
-        { path: "home", element: <AdminHome /> },
-        { path: "setting", element: <Setting /> },
-        { path: "customers", element: <Customers /> },
-        { path: "products", element: <Products /> },
-      
+      { path: "/Register", element: <Register /> },
+      { path: "/otp-verification", element: <OtpVerification /> },
+      { path: "/cart", element: <Cart /> },
+      { path: "/placeOrder", element: <PlaceOrder></PlaceOrder> },
+      { path: "/Ball", element: <Ball /> },
+      { path: "/badminton", element: <Badminton></Badminton> },
+      { path: "/basket", element: <Basket></Basket> },
+      { path: "/volly", element: <Volly></Volly> },
+      { path: "/chess", element: <Chess></Chess> },
+      { path: "/table", element: <Table></Table> },
+      { path: "/shuttle", element: <Shuttles></Shuttles> },
+      { path: "/trophy", element: <Footwears></Footwears> },
+      { path: "/apparels", element: <Apparels></Apparels> },
+      { path: "/carromboard", element: <Carrom></Carrom> },
+
+      { path: '/Account', element: <Account /> },
+      { path: "/Football", element: <Football /> },
+      { path: '/upload', element: <Upload /> },
+      { path: '/changepassword', element: <Passwordchange /> },
+      { path: '/our-story', element: <Story></Story> },
+      { path: '/term', element: <Terms></Terms> },
+      { path: '/privacy', element: <Privacy></Privacy> },
+      { path: '/return', element: <Return></Return> },
+      { path: '/shipping', element: <Shipping></Shipping> },
+      { path: '/pumas', element: <Pumas></Pumas> },
+      { path: '/addidas', element: <Addidas></Addidas> },
+      { path: '/nike', element: <Nike></Nike> },
+      { path: '/criket', element: <Cricket></Cricket> },
+      { path: '/foot', element: <Foot></Foot> },
+      { path: '/archery', element: <Archery></Archery> },
+      { path: '/tennis', element: <Tennis></Tennis> },
+
+    ]
+  },
+  {
+    path: "/admin", element: <PrivateRoute role={['admin']} />,   // Protects all /admin routes
+    children: [
+      { path: "", element: <AdminNavbar /> },
+      { path: "home", element: <AdminHome /> },
+      { path: "setting", element: <Setting /> },
+      { path: "customers", element: <Customers /> },
+      { path: "products", element: <Products /> },
 
 
-      ]
-    }
+
+    ]
+  }
 
   ])
 function App() {

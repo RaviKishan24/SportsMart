@@ -22,7 +22,7 @@ function Carousel() {
         modules={[Navigation, Autoplay]}
 breakpoints={{
   320: {
-    slidesPerView: 3,
+    slidesPerView: 1,
   },
   768: {
     slidesPerView: 2,

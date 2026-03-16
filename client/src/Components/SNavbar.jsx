@@ -17,19 +17,22 @@ function SNavbar() {
   const sliderRef = useRef(null);
 
 
-  const scrollLeft = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: -200, behavior: 'smooth' });
-      sliderRef.current.scrollLeft - 200
-    }
-  };
 
-  const scrollRight = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: 200, behavior: 'smooth' });
-      sliderRef.current.scrollLeft + 200
-    }
-  };
+  const categories = [
+    { img: cricketbat1, label: "Cricket Bats", link: "/Bat" },
+    { img: crickball1, label: "Cricket Balls", link: "/Ball" },
+    { img: football1, label: "Footballs", link: "/Football" },
+    { img: badminton, label: "Badmintons", link: "/badminton" },
+    { img: carromboard, label: "Carromboards", link: "/carromboard" },
+    { img: volleyball, label: "Volleyballs", link: "/volly" },
+    { img: basketball, label: "Basketballs", link: "/basket" },
+    { img: shuttle, label: "Shuttles", link: "/shuttle" },
+    { img: chess, label: "Chess", link: "/chess" },
+    { img: tennis, label: "Table Tennis", link: "/table" },
+    { img: apparels, label: "Apparels", link: "/apparels" },
+    { img: trophy, label: "Footwears", link: "/trophy" },
+    { img: trophy, label: "Protective Gears", link: "/gears" }
+  ];
 
 
 
@@ -38,96 +41,20 @@ function SNavbar() {
 
     <div className="category-container">
       <h4 className='category-heading'>SHOP BY CATEGORIES  </h4>
-      <div className="slider-btn left-btn" onClick={scrollLeft}>
-        <i className="fas fa-chevron-left" />
-      </div>
       <div className="category-list" ref={sliderRef}>
-        <Link to={'./Bat'}>
-          <div className="category-item">
-            <img className='category-image' src={cricketbat1} alt="" />
-            <p className='category-label'>Cricket Bats</p>
-          </div>
-        </Link>
-        <Link to={'/Ball'}>
-          <div className="category-item">
-            <img className='category-image' src={crickball1} alt="" />
-            <p className='category-label'> Cricket Balls</p>
-          </div>
-        </Link>
-        <Link to={'/Football'}>
-          <div className="category-item">
-            <img className='category-image' src={football1} alt="" />
-            <p className='category-label'>Footballs</p>
-          </div>
-        </Link>
-        <Link to={'/badminton'}>
-          <div className="category-item">
-            <img className='category-image' src={badminton} alt="" />
-            <p className='category-label'>Badmintons</p>
-          </div>
-        </Link>
-        <Link to={'/carromboard'}>
-          <div className="category-item">
-            <img className='category-image' src={carromboard} alt="" />
-            <p className='category-label'>Carromboards</p>
-          </div>
-        </Link>
-        <Link to={'/volly'}>
-          <div className="category-item">
-            <img className='category-image' src={volleyball} alt="" />
-            <p className='category-label'> VolleyBalls</p>
-          </div>
-        </Link>
-        <Link to={'/basket'}>
-          <div className="category-item">
-            <img className='category-image' src={basketball} alt="" />
-            <p className='category-label'>Basketballs</p>
-          </div>
-        </Link>
-        <Link to={'/shuttle'}>
-          <div className="category-item">
-            <img className='category-image' src={shuttle} alt="" />
-            <p className='category-label'>Shuttles</p>
-          </div>
-        </Link>
-        <Link to={'/chess'}>
-          <div className="category-item">
-            <img className='category-image' src={chess} alt="" />
-            <p className='category-label  '>Chess</p>
-          </div>
-        </Link>
-        <Link to={'/table'}>
-          <div className="category-item ">
-            <img className='category-image' src={tennis} alt="" />
-            <p className='category-label'>Table Tennis</p>
-          </div>
-        </Link>
-        <Link to={'/apparels'}>
-          <div className="category-item ">
-            <img className='category-image' src={apparels} alt="" />
-            <p className='category-label'>Apparels</p>
-          </div>
-        </Link>
-        <Link to={'/trophy'}>
-          <div className="category-item ">
-            <img className='category-image' src={trophy} alt="" />
-            <p className='category-label'>Footwears</p>
-          </div>
-        </Link>
-        <Link>
-          <div className="category-item ">
-            <img className='category-image' src={trophy} alt="" />
-            <p className='category-label'>Protective Gears</p>
-          </div>
-        </Link>
-        <div className="slider-btn right-btn" onClick={scrollRight}>
-        <i className="fas fa-chevron-right" />
+        {categories.map((item, index) => (
+          <Link to={item.link} key={index}>
+            <div className="category-item">
+              <img className="category-image" src={item.img} alt={item.label} />
+              <p className="category-label">{item.label}</p>
+            </div>
+          </Link>
+        ))}
       </div>
-
-      </div>
-      
 
     </div>
+
+
 
 
   )
