@@ -41,7 +41,7 @@ function Topselling() {
 
   return (
     <div className="main">
-      <h4 className="head mx-5">TOP SELLING</h4>
+      <h4 className="head mx-5">New Arrivals</h4>
       <div className="CARDS gap-3 row">
         {TopsellingProducts.map((product) => {
           
