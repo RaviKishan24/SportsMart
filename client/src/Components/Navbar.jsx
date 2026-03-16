@@ -1,61 +1,37 @@
- 
+
 
 import './Navbar.css'
 import logo from '../assets/logo/smlogo.png'
-import { Link, useNavigate} from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
-import {   useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { useState } from 'react';
 
 
- 
+
 
 function Navbar() {
   const user = useSelector((store) => store.userGS.user);
   let userdata;
-  // const searchResults = useSelector((store) => store.productGS.searchResults);
-  // const loading = useSelector((store) => store.productGS.loading);
-  // const error = useSelector((store) => store.productGS.error);
-
-  // const [keyword, setKeyword] = useState("");
-  // const dispatch = useDispatch();
-
-  // const handleSearch = () => {
-  //   if (keyword.trim()) {
-  //     dispatch(searchProductAction(keyword));
-  //   }
-  // };
+  const routes = {
+    bat: "/bat",
+    ball: "/ball",
+    carromboard: "/carromboard",
+    badminton: "/badminton",
+    basketball: "/basket",
+    vollyball: "/volly",
+    tabletennis: "/table",
+    chess: "/chess",
+    football: "/football"
+  };
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
-
   const handleSearch = () => {
-    if (searchTerm.trim().toLowerCase() === 'bat') {
-      navigate('/bat');
-    } else if (searchTerm.trim().toLowerCase() === 'ball') {
-      navigate('/ball')
-    }
-    else if (searchTerm.trim().toLowerCase() === 'carromboard') {
-      navigate('/carromboard');
-    }
-    else if (searchTerm.trim().toLowerCase() === 'badminton') {
-      navigate('/badminton');
-    }
-    else if (searchTerm.trim().toLowerCase() === 'basketball') {
-      navigate('/basket');
-    }
-    else if (searchTerm.trim().toLowerCase() === 'vollyball') {
-      navigate('/volly');
-    }
-    else if (searchTerm.trim().toLowerCase() === 'tabletennis') {
-      navigate('/table');
-    }
-    else if (searchTerm.trim().toLowerCase() === 'chess') {
-      navigate('/chess');
-    }
-    else if (searchTerm.trim().toLowerCase() === 'football') {
-      navigate('/Football');
-    }
-    else {
+    const key = searchTerm.trim().toLowerCase();
+
+    if (routes[key]) {
+      navigate(routes[key]);
+    } else {
       alert("No product found!");
     }
   };
@@ -97,7 +73,7 @@ function Navbar() {
 
     <nav className="navbar navbar-expand-lg Nav">
       <div className="container-fluid">
-        <Link  to="/" className='d-flex  justify-content-center align-items-center'>
+        <Link to="/" className='d-flex  justify-content-center align-items-center'>
           <img src={logo} alt="" className='smlogo' />
           <h4>SPORTSMART</h4>
         </Link>
@@ -107,9 +83,9 @@ function Navbar() {
             onChange={(e) => setSearchTerm(e.target.value)}
             onKeyDown={handleKeyDown}
           />
-           
-           <i className="fas fa-search search-icon"onClick={handleSearch} />
-{/*     
+
+          <i className="fas fa-search search-icon" onClick={handleSearch} />
+          {/*     
           {loading && <p>Loading...</p>}
           {error && <p style={{ color: "red" }}>{error}</p>}
     
@@ -120,9 +96,9 @@ function Navbar() {
               ))}
             </ul>
           )} */}
-    
-          
-         
+
+
+
         </div>
         <div className="Icons  mt-3   d-flex gap-5" >
 

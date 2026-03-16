@@ -1,5 +1,5 @@
 .Nav {
-  height: 100px;
+  height:auto;
   width: 100%;
   border: 1px solid #ccc;
   background: #092143;
@@ -7,20 +7,19 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: sticky;
   z-index: 1000;
+  top: 0;
 }
 
 .smlogo {
-  height: 70px;
+  height: auto;
   width: 70px;
   border-radius: 50%;
 }
 
 .navbar-brand {
-  height: 80px;
+  height: auto;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -31,9 +30,9 @@
 .icons {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 12px;
- 
+  gap: 5px;
 }
 
 .icn {
@@ -52,7 +51,7 @@
 
 .search-bar {
   width: 100%;
-  padding: 10px 40px 10px 40px;
+  padding: 10px 40px;
   border: 1px solid #ccc;
   border-radius: 50px;
   font-size: 16px;
@@ -60,11 +59,12 @@
 
 .search-icon {
   position: absolute;
-  right: 10px;
+  right: 15px;
   top: 50%;
   transform: translateY(-50%);
   color: black;
   cursor: pointer;
+  font-size: 18px;
 }
 
 .user-name {
@@ -82,23 +82,22 @@
   color: white;
 }
 .profilePic{
-  height: 50px;
-  width: 50px;
-  object-fit: cover ;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
   border-radius: 50%;
-  object-position: center;
 }
 
 /* Tablets (481px to 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   .Nav {
     flex-direction: row;
-    height: 100px;
+    height: auto;
     padding: 10px 15px;
   }
 
   .smlogo {
-    height: 60px;
+    height: auto;
     width: 60px;
   }
 
@@ -128,12 +127,12 @@
 /* Laptops (769px to 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .Nav {
-    height: 100px;
+    height: auto;
     padding: 10px 20px;
   }
 
   .smlogo {
-    height: 70px;
+    height:auto;
     width: 70px;
   }
 
@@ -158,7 +157,7 @@
 /* Desktops (1025px and above) */
 @media (min-width: 1025px) {
   .Nav {
-    height: 100px;
+    height: auto;
     padding: 10px 30px;
   }
 
