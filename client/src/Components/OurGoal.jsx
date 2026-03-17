@@ -1,6 +1,6 @@
 import React from 'react'
 import goal from "../assets/goal.jpg"
-import "./ourGoal.css"
+import "./OurGoal.css"
 import { useNavigate } from 'react-router'
 
 function OurGoal() {
