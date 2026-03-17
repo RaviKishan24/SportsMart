@@ -30,7 +30,7 @@ const Footwears = () => {
   return (
     <div>
 <div className='Pmain '>
-      <Navbar></Navbar>
+   
       <div className='row gap-3  pmain' >{ballProducts.map((item) => { 
         return (
           <div className="card" key={item._id}>
@@ -54,7 +54,7 @@ const Footwears = () => {
       })}
 
       </div>
-      <Footer></Footer>
+  
     </div>
 
     </div>

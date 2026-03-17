@@ -1,5 +1,6 @@
 .cart-main{
-  margin-top: 110px;
+ height: auto;
+ min-height: 60vh;
 }
 .cart-container {
     display: flex;

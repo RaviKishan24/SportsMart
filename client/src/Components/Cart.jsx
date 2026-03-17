@@ -57,7 +57,6 @@ function Cart() {
 
   return (
     <div>
-      <Navbar />
       <div className='row cart-main mx-5'>
         <div className='cart-header d-flex jusify-content-between align-item-center'>
           <span className="header-item">Product</span>

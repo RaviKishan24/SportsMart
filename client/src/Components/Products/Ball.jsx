@@ -31,7 +31,7 @@ function Ball() {
  
   return (
     <div className='Pmain '>
-      <Navbar></Navbar>
+   
       <div className='row gap-3  pmain' >{ballProducts.map((item) => { 
         return (
           <div className="card" key={item._id}>
@@ -55,7 +55,7 @@ function Ball() {
       })}
 
       </div>
-      <Footer></Footer>
+   
     </div>
   )
 }

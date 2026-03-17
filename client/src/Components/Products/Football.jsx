@@ -26,7 +26,7 @@ function Football() {
     return (
 
         <div>
-            <Navbar></Navbar>
+          
 
             <div className='row gap-3  pmain'>
                 {footballproduct.map((product) => {
@@ -55,7 +55,7 @@ function Football() {
 
 
 
-            <Footer></Footer>
+            
         </div>
     )
 }

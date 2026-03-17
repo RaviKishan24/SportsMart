@@ -30,7 +30,7 @@ function Bat() {
   return (
 
     <div>
-      <Navbar></Navbar>
+      
       <div className=' row gap-3  pmain'>
         {batProducts.map((product) => {
           return (
@@ -53,7 +53,7 @@ function Bat() {
           )
         })}
       </div>
-      <Footer></Footer>
+      
     </div>
   )
 }
