@@ -52,6 +52,7 @@ import Table from './Components/Products/Table'
 import Shuttles from './Components/Products/Shuttles'
 import Footwears from './Components/Products/Footwears'
 import Apparels from './Components/Products/Apparels'
+import AllCategories from './Components/AllCategories'
 
 const router = createBrowserRouter(
   [{
@@ -91,6 +92,7 @@ const router = createBrowserRouter(
       { path: '/foot', element: <Foot></Foot> },
       { path: '/archery', element: <Archery></Archery> },
       { path: '/tennis', element: <Tennis></Tennis> },
+      { path: '/all-categories',element:<AllCategories/> }
 
     ]
   },

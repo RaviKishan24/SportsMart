@@ -1,0 +1,61 @@
+.goal-container {
+    width: 100%;
+    padding: 10px 10px;
+}
+
+.goal-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+/* FLEX LAYOUT */
+.goal-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* IMAGE SECTION */
+.goal-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* TEXT SECTION */
+.goal-text {
+    max-width: 900px;
+}
+
+.goal-text h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.goal-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.goal-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* 🔥 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .goal-content {
+        flex-direction: column; /* IMAGE UP, TEXT DOWN */
+        text-align: center;
+    }
+
+    .goal-image img {
+        max-width: 100%;
+    }
+}

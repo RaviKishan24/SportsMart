@@ -6,6 +6,7 @@ import './Home.css'
 import Topselling from './Topselling';
 import Footer from './Footer';
 import Bss from './Bss';
+import OurGoal from './OurGoal';
 
 
 
@@ -18,6 +19,7 @@ function Home() {
       <SNavbar></SNavbar>
       <Bss />
       <Topselling></Topselling>
+      <OurGoal/>
     </>
   );
 }
