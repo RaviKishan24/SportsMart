@@ -59,10 +59,10 @@ function Topselling() {
         navigation
         pagination={{ clickable: true }}
         breakpoints={{
-          1200: { slidesPerView: 4 }, // Desktop
-          992: { slidesPerView: 3 },  // Laptop
-          768: { slidesPerView: 2 },  // Tablet
-          0: { slidesPerView: 1 },    // Mobile
+          1200: { slidesPerView: 5 }, // Desktop
+          992: { slidesPerView: 4 },  // Laptop
+          768: { slidesPerView: 3 },  // Tablet
+          0: { slidesPerView: 2 },    // Mobile
         }}
       >
         {TopsellingProducts.map((product) => {
@@ -110,7 +110,7 @@ function Topselling() {
           );
         })}
       </Swiper>
-      {/* 🔥 SWIPER END */}
+     
     </div>
   );
 }

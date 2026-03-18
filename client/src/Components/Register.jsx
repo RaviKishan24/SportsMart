@@ -30,7 +30,7 @@ function Register() {
         }
       }
     })
-    
+
   }, []);
 
 
@@ -68,7 +68,7 @@ function Register() {
     setShowpassword((prevState) => !prevState)
   }
 
-  
+
   useEffect(() => {
 
     if (success) {
@@ -91,92 +91,118 @@ function Register() {
   return (
 
     <div className='register-main'>
-      <div className='container signin-form '>
-        <h2 className='text-center text-dark'>Create Account</h2>
-        <p className='text-center' >Get Started with your free account</p>
+      <div className='container signin-form'>
+
+        <h2 className='form-title'>Create Account</h2>
+        <p className='form-subtitle'>Get started with your free account</p>
+
         <form onSubmit={handlesubmit}>
-          <div className="form-item   d-flex   align-items-center ">
-            <label htmlFor="first-name" className="form-label   lable-logos ">   <i className="fa fa-user"></i></label>
-            <input type="text" className="form-control " id='first-name' placeholder="Full Name" aria-label=" name" value={name} onChange={(e) => setName(e.target.value)} />
-          </div>
-          <div className=" d-flex form-item align-items-center">
-            <label htmlFor="formGroupExampleInput" className="form-label lable-logos"><i className="fa fa-envelope"></i></label>
-            <input type="email" className="form-control" id="formGroupExampleInput" placeholder="Enter Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-          </div>
-          <div className="d-flex form-item align-items-center">
-            <label htmlFor="formGroupExampleInput2" className="form-label lable-logos"><i className="fa fa-phone"></i></label>
-            <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Enter Your Mobile Number" value={mobile} onChange={(e) => setMobile(e.target.value)} pattern='[0-9]{10}' maxLength={10} required />
+
+          {/* NAME */}
+          <div className="form-item d-flex align-items-center">
+            <label className=" lable-logos">
+              <i className="fa fa-user"></i>
+            </label>
+            <input type="text" className="form-control" placeholder="Full Name"
+              value={name} onChange={(e) => setName(e.target.value)} />
           </div>
 
-          <div className='d-flex align-items-center gap-1'>
+          {/* EMAIL */}
+          <div className="form-item d-flex align-items-center">
+            <label className=" lable-logos">
+              <i className="fa fa-envelope"></i>
+            </label>
+            <input type="email" className="form-control" placeholder="Enter Your Email"
+              value={email} onChange={(e) => setEmail(e.target.value)} required />
+          </div>
 
-            <div className="d-flex align-items-center mx-1 dob">
-              <label htmlFor="dob" className="form-label lable-logos" onClick={handleclick}>
+          {/* MOBILE */}
+          <div className="form-item d-flex align-items-center">
+            <label className="lable-logos">
+              <i className="fa fa-phone"></i>
+            </label>
+            <input type="text" className="form-control" placeholder="Mobile Number"
+              value={mobile} onChange={(e) => setMobile(e.target.value)}
+              pattern='[0-9]{10}' maxLength={10} required />
+          </div>
+
+          {/* DOB + GENDER */}
+          <div className='d-flex gap-2 flex-wrap'>
+
+            <div className="d-flex align-items-center dob">
+              <label className=" lable-logos" onClick={handleclick}>
                 <i className="fa fa-calendar"></i>
               </label>
-              <input type="date" value={dob} onChange={(e) => setDob(e.target.value)} onClick={handleclick} required id='dob' ref={dobRef} className='form-control' />
+              <input type="date" className='form-control'
+                value={dob} onChange={(e) => setDob(e.target.value)}
+                ref={dobRef} required />
             </div>
 
-
-            <div className='d-flex align-items-center gender gap-1'>
-              <label htmlFor="gender" className="form-label lable-logos">
+            <div className='d-flex align-items-center gender'>
+              <label className=" lable-logos">
                 <i className="fa fa-venus-mars"></i>
               </label>
-              <select value={gender} onChange={(e) => setGender(e.target.value)} required className='form-control' id='gender'>
-                <option value="">Select Gender</option>
+              <select className='form-control'
+                value={gender} onChange={(e) => setGender(e.target.value)} required>
+                <option value="">Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
-                <option value="Other">Other</option>
               </select>
             </div>
 
           </div>
 
-          <div className='d-flex ' onClick={() => WidgetRef.current.open()} >
-            <label htmlFor="profilePic" className="form-label lable-logos">  <i className="fa fa-camera"></i>  </label>
-            <div className='d-flex form-item align-items-center profile-upload' id='profilePic' onClick={() => WidgetRef.current.open()} >Upload profilePic</div>
+          {/* PROFILE */}
+          <div className='d-flex align-items-center profile-wrapper'
+            onClick={() => WidgetRef.current.open()}>
+            <label className=" lable-logos">
+              <i className="fa fa-camera"></i>
+            </label>
+            <div className='profile-upload'>Upload Profile Image</div>
           </div>
 
+          {/* PASSWORD */}
+          <div>
+            <div className="d-flex align-items-center">
+              <label className="lable-logos">
+                <i className="fa fa-lock"></i>
+              </label>
 
+              <div className='d-flex gap-2 w-100 password-group'>
+                <input type={showpassword ? "text" : "password"}
+                  className="form-control"
+                  placeholder='Password'
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)} />
 
-          <div >
-            <div className=" d-flex  align-items-center  ">
-              <label htmlFor="inputPassword6" className="lable-logos"><i className="fa fa-lock"></i></label>
-              <div className=' d-flex gap-2'>
-
-                <input type={showpassword ? "text" : "password"} id="inputPassword6" className="form-control" aria-describedby="passwordHelpInline" placeholder='Enter password' value={password} onChange={(e) => setPassword(e.target.value)} />
-                <input type={showpassword ? "text" : "password"} id="inputPassword4" className="form-control" aria-describedby="passwordHelpInline" placeholder='Confirm Password' value={confirmpassword} onChange={(e) => setConfirmpassword(e.target.value)} />
+                <input type={showpassword ? "text" : "password"}
+                  className="form-control"
+                  placeholder='Confirm password'
+                  value={confirmpassword}
+                  onChange={(e) => setConfirmpassword(e.target.value)} />
               </div>
             </div>
-            <div className="show-password mt-1 mx-2 gap-4">
-              <input type="checkbox" id='Password' checked={showpassword} onChange={handleshowpassword} />
-              <label htmlFor="Password">Show Password</label>
+
+            <div className="show-password">
+              <input type="checkbox" checked={showpassword} onChange={handleshowpassword} />
+              <label>Show Password</label>
             </div>
           </div>
-          <button className='btn-signup mt-2' type='submit' disabled={isLoading} >  {isLoading ? <FaSpinner className="spin-loader" /> : "Create Account"}</button>
+
+          {/* BUTTON */}
+          <button className='btn-signup' type='submit' disabled={isLoading}>
+            {isLoading ? <FaSpinner className="spin-loader" /> : "Create Account"}
+          </button>
+
         </form>
-        <div className=' text-secondary mt-2 text-center '>
-          have an account?
-          <Link to="/Login" className='fw-medimum   mx-2 text-decoration-underline text-danger-emphasis'>Login</Link>
+
+        {/* LOGIN */}
+        <div className='text-center login-link'>
+          Already have an account?
+          <Link to="/Login">Login</Link>
         </div>
 
-
-        <div>
-          <p className='text-center'>or SignUp via</p>
-          <div className='d-flex gap-3'>
-            <button className='orsignup google-btn d-flex align-items-center justify-content-center gap-2 border '>
-              <i className="fa-brands fa-google " />
-              <p className='mb-0'>Google</p>
-            </button>
-            <button className='orsignup facebook-btn d-flex align-items-center justify-content-center gap-2 border '>
-              <i className='fa-brands fa-facebook' />
-              <p className='mb-0'>facebook</p>
-            </button>
-          </div>
-        </div>
       </div>
-
-
     </div>
   );
 }

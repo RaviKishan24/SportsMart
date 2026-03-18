@@ -1,69 +1,168 @@
 .register-main {
-    padding: 10px;
-    width: 100%;
     height: auto;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #f5f7fa;
 }
 
+/* CARD */
 .signin-form {
-    width: 410px;
-    height: auto;
-    background: #ccc;
-    border: 1px solid black;
-    border-radius: 15px;
-    padding: 10px;
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.lable-logos {
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 40px;
-    font-size: 30px;
+/* TITLE */
+.form-title {
+  text-align: center;
+  font-weight: 600;
+  color: #092143;
 }
 
+.form-subtitle {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+/* INPUT ROW */
 .form-item {
-    width: 100%;
-    height: 50px;
-    
+  display: flex;
+  margin-bottom: 15px;
 }
 
-.btn-signup {
-    background: #092143;
-    color: white;
-    width: 380px;
-    border-radius: 20px;
-    font-size: 30px;
-    font-weight: 400;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+/* ICON */
+.lable-logos {
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #092143;
+}
+
+/* INPUT */
+.form-control {
+  flex: 1;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.form-control:focus {
+  border-color: #092143;
+  box-shadow: 0 0 5px rgba(9, 33, 67, 0.2);
+}
+
+/* DOB + GENDER */
+.dob, .gender {
+  flex: 1;
+}
+
+/* PROFILE */
+.profile-wrapper {
+  margin: 10px 0;
+  cursor: pointer;
 }
 
 .profile-upload {
-    width: 100%;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: 0.3s;
+  flex: 1;
+  background: #f9f9f9;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* PASSWORD */
+.password-group input {
+  width: 100%;
+}
+
+.show-password {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  margin: 8px 0;
+}
+
+/* BUTTON */
+.btn-signup {
+  width: 100%;
+  padding: 12px;
+  background: #092143;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn-signup:hover {
+  background: #0b2d5c;
 }
 
 
+.login-link {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.login-link a {
+  margin-left: 5px;
+  color: #092143;
+  font-weight: 500;
+}
+
+.form-control:invalid {
+  border-color: #ccc !important;
+  box-shadow: none !important;
+}
 .spin-loader {
-    animation: spin 1s linear infinite;
-    font-size: 20px;
+  animation: spin 1s linear infinite;
+}
+input {
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+input:focus {
+  border-color: #092143;
+}
+
+
+input:invalid {
+  border-color: #ccc;
+  box-shadow: none;
+}
+
+
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+
+  .signin-form {
+    padding: 15px;
   }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+
+  .password-group {
+    flex-direction: column;
   }
-  
 
+  .lable-logos {
+    width: 35px;
+  }
 
-
+}

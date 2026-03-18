@@ -1,12 +1,12 @@
-import React from 'react'
-import Navbar from './Navbar';
+
 import SNavbar from './SNavbar';
 import Carousel from './Carousel';
 import './Home.css'
 import Topselling from './Topselling';
-import Footer from './Footer';
-import Bss from './Bss';
+import Bss from "./Bss"
 import OurGoal from './OurGoal';
+import Subscribe from './Subscribe';
+import WhyChooseUs from './WhyChooseUs';
 
 
 
@@ -20,6 +20,8 @@ function Home() {
       <Bss />
       <Topselling></Topselling>
       <OurGoal/>
+      <WhyChooseUs/>
+      <Subscribe/>
     </>
   );
 }

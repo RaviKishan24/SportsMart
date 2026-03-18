@@ -4,7 +4,7 @@ axios.defaults.withCredentials = true;
 export const fetchProductAction = () => async (dispatch) => {
     dispatch({ type: FETCH_PRODUCT_REQUEST });
     try {
-        const response = await axios.get("https://sportsmart-ag6m.onrender.com/Product/fetch-allproduct");
+        const response = await axios.get("http://localhost:7000/Product/fetch-allproduct");
 
         if (response.data.success) {
             dispatch({ type: FETCH_PRODUCT_SUCCESS, payload: response.data.data })
@@ -21,7 +21,7 @@ export const fetchProductAction = () => async (dispatch) => {
   export const searchProductAction = (keyword) => async (dispatch) => {
     dispatch({ type: SEARCH_PRODUCT_REQUEST});
     try {
-      const response = await axios.get("https://sportsmart-ag6m.onrender.com/Product/search", {
+      const response = await axios.get("http://localhost:7000/Product/search", {
         keyword,
       });
   

@@ -1,9 +1,10 @@
 .main {
   width: 100%;
   padding: 20px 10px;
+  height: auto;
 }
 
-/* HEADING */
+
 .head {
   margin-bottom: 20px;
   font-size: 28px;
@@ -11,10 +12,7 @@
   font-weight: 600;
 }
 
-/* ❌ REMOVE OLD FLEX (IMPORTANT) */
-/* .CARDS { display:flex } ❌ */
 
-/* SWIPER FIX */
 .swiper {
   padding: 20px 10px;
 }
@@ -24,10 +22,9 @@
   justify-content: center;
 }
 
-/* CARD */
 .card {
   width: 100%;
-  max-width: 260px; /* controls card size */
+  max-width: 260px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -37,10 +34,10 @@
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
-/* WISHLIST ICON */
+
 .whishlisticon {
   position: absolute;
   top: 10px;
@@ -50,7 +47,6 @@
   z-index: 10;
 }
 
-/* IMAGE */
 .card-img-top {
   width: 100%;
   height: 180px;
@@ -58,20 +54,22 @@
   padding: 10px;
 }
 
-/* BODY */
 .card-body {
   padding: 10px;
 }
 
-/* TITLE */
+
 .title {
-  height: 40px;
+   width: 100%; 
+   height: 20px;
+  white-space: nowrap;
   overflow: hidden;
-  font-size: 14px;
+  text-overflow: ellipsis;
+  font-size: 12px;
   font-weight: 500;
 }
 
-/* PRICE */
+
 .prices {
   margin: 10px 0;
   display: flex;
@@ -85,7 +83,7 @@
   font-size: 13px;
 }
 
-/* BUTTON */
+
 .card-button {
   display: flex;
   align-items: center;
@@ -114,22 +112,23 @@
   font-size: 14px;
 }
 
-/* PAGINATION DOTS */
+
 .swiper-pagination-bullet {
   background: black;
 }
 
-/* NAVIGATION BUTTONS */
+
 .swiper-button-next,
 .swiper-button-prev {
   color: black;
 }
+
 .card-img-top:hover {
   transform: scale(1.05);
   transition: 0.3s;
 }
 
-/* 📱 RESPONSIVE TWEAKS */
+
 @media (max-width: 768px) {
   .card {
     max-width: 220px;

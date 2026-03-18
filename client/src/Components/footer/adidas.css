@@ -1,7 +1,7 @@
-/* PageStyles.css */
 
-/* General container for the page */
 .page-container {
+  height: auto;
+  width: 100%;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;

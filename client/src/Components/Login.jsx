@@ -49,12 +49,12 @@ function Login() {
         <h2 className='text-center'>Login</h2>
         <h1 className='text-center'>Welcome Back</h1>
         <form onSubmit={handlesubmit} >
-          <div className=" d-flex form-item align-items-center">
-            <label htmlFor="formGroupExampleInput" className="form-label lable-logos"><i className="fa fa-envelope"></i></label>
+          <div className="  form-item  align-items-center">
+            <label htmlFor="formGroupExampleInput" className="lable-logos"><i className="fa fa-envelope"></i></label>
             <input type="email" className="form-control" id="formGroupExampleInput" placeholder="Enter Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
-          <div className=" d-flex  align-items-center  mt-3 ">
-            <label htmlFor="password" className="lable-logos"><i className="fa fa-lock"></i></label>
+          <div className="  form-item  align-items-center   ">
+            <label htmlFor="password" className="lable-logos "><i className="fa fa-lock"></i></label>
             <input type={showpassword ? "text" : "password"} id="password" className="form-control" autoComplete='username' placeholder='Enter password' value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
 

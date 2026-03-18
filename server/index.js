@@ -20,7 +20,7 @@ server.use(express.json());
 server.use(cookieParser());
 
 server.use(cors({
-    origin: "https://sportsmart.netlify.app",
+    origin: "http://localhost:5173",
     credentials: true,
 }))
 
